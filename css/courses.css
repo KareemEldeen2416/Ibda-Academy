@@ -1,0 +1,114 @@
+:root{
+    --section-color : #9cd3d8;
+    --item-color: #0396a6;
+    --offWhite: #e9e8e8;
+    --black:#383838;
+}
+
+body{
+    font-family: "IBM Plex Sans Arabic";
+}
+
+.courses-nav{
+    height: 80vh;
+    background: linear-gradient( 45deg, var(--section-color)  ,var(--item-color) );
+}
+
+
+.courses-group{
+    background-color: white;
+}
+
+.course{
+    min-height: 280px;
+    max-height: 280px;
+    overflow: hidden;
+    border-bottom: 5px solid var(--item-color);
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    
+}
+
+
+
+
+
+
+.course:hover{
+    max-height: 600px;
+    animation-name: expand-course;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+.course:not(:hover){
+    max-height: 280px;
+    animation-name: contract-course;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.course-image{
+    
+   min-width: 200px;
+    min-height: 200px;
+    background-color: var(--offWhite);
+    border-radius: 200px;
+    
+}
+
+.course-image:hover{
+    animation-name: course-image-effect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.course-image:not(:hover){
+    animation-name: reverse-course-image-effect;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes course-image-effect {
+    from{
+        border-radius: 200px;
+    }
+    to{
+        border-radius: 20px
+    }
+}
+
+@keyframes reverse-course-image-effect {
+    from{
+        border-radius:20px;
+    }
+    to{
+        border-radius:200px;
+    }
+}
+
+@keyframes expand-course {
+    from{
+        height: 300px;
+    }
+
+    to{
+        height: 600px;
+    }
+    
+}
+
+@keyframes contract-course {
+    from{
+        height: 600px;
+    }
+
+    to{
+        height: 300px;
+    }
+}

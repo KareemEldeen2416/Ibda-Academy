@@ -1,0 +1,172 @@
+
+
+body{
+    font-family: "IBM Plex Sans Arabic";
+}
+
+:root{
+    --section-color : #9cd3d8;
+    --item-color: #0396a6;
+    --offWhite: #e9e8e8;
+    --black:#383838;
+}
+
+.navbar{
+    font-family: "IBM Plex Sans Arabic" ;
+    font-weight: 700;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+
+.navbar-nav .nav-item .nav-link{
+    border-radius: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+ background-color: var(--item-color);
+ color: var(--offWhite);
+ border-radius: 20px;
+ animation-name: change-border-radius;
+ animation-timing-function: ease;
+ animation-duration: 1s;
+}
+
+.main-section{
+    height: calc(100vh - 122px);
+    background-color: aliceblue;
+    font-family: "IBM Plex Sans Arabic" ;
+    font-weight: 500;
+}
+
+.main-section::before{
+    content:'';
+    background-image: url('main-back.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: calc(100vh - 122px);
+    width: 100%;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.container{
+    z-index: 1;
+}
+
+.services-section{
+    font-family: "IBM Plex Sans Arabic" ;
+}
+
+
+.service{
+    width: calc(100% - 1rem);
+}
+.service-image-container{
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+
+.service-image{
+    width: 100%;
+    height: 300px;
+}
+
+.service-image:hover{
+    
+    animation: image-hover-scale 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.service-image:not(:hover){
+
+    animation: reverse-hover-scale 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.about{
+    position: relative;
+    height: 70vh;
+    border-radius: 30vh;
+    border-top-left-radius: 0;
+    border-bottom-right-radius:0;
+    background-color: #9cd3d8;
+}
+
+.about-image{
+    position: absolute;
+    width: 350px;
+    height: 280px;
+    top: 50%;
+    left: 80%;
+    border-radius:300px;
+}
+
+.author{
+    background-color: var(--black);
+    color: white;
+    height: 50vh;
+}
+
+
+
+
+@keyframes change-border-radius{
+
+
+    from{
+      border-radius: 10px;
+    }
+
+    to{
+        border-radius: 50px
+    }
+
+}
+
+@keyframes image-hover-scale {
+
+    from{
+        
+        transform: scale(1);
+    }
+    to{
+       
+        transform: scale(1.2);
+    }
+    
+}
+
+@keyframes reverse-hover-scale {
+    from{
+        
+        transform: scale(1.2);
+    }
+    to{
+       
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes position-change {
+    from{
+        transform: translate(-50%);
+    }
+    to{
+        transform: translateX(50%);
+    }
+    
+}
