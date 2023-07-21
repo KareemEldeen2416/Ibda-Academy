@@ -13,3 +13,62 @@ body{
     height: 80vh;
     background: linear-gradient( 45deg, var(--section-color)  ,var(--item-color) );
 }
+ 
+
+.test{
+    height: 200px;
+    border-radius: 10px;
+}
+
+.test-image{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: #0396a6;
+}
+
+.test-image-content{
+    height: 100%;
+    width: 100%;
+    border-radius: 150px;
+}
+
+.test-image-content:hover{
+    animation-name: rotation;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.test-image-content:not(:hover){
+    animation-name: reverse-rotation;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+}
+
+@keyframes rotation {
+
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(15deg);
+    }
+    
+}
+
+@keyframes reverse-rotation {
+
+    from{
+        transform: rotate(15deg);
+    }
+
+    to{
+        transform: rotate(0deg);
+    }
+    
+}
+
