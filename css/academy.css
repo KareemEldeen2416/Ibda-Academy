@@ -109,7 +109,7 @@ body{
     position: absolute;
     width: 350px;
     height: 280px;
-    top: 50%;
+    top: 55%;
     left: 80%;
     border-radius:300px;
 }
@@ -169,4 +169,26 @@ body{
         transform: translateX(50%);
     }
     
+}
+
+@media(max-width : 576px){
+
+    .about{
+        position: relative;
+        height: 70vh;
+        border-radius: 10vh;
+        border-top-left-radius: 0;
+        border-bottom-right-radius:0;
+        background-color: #9cd3d8;
+    }
+    
+    .about-image{
+        position: absolute;
+        width: 200px;
+        height: 180px;
+        top: 75%;
+        left: 45%;
+        border-radius:300px;
+    }
+
 }
