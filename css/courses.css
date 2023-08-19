@@ -10,8 +10,7 @@ body{
 }
 
 .courses-nav{
-    height: 80vh;
-    background: linear-gradient( 45deg, var(--section-color)  ,var(--item-color) );
+    height: 100vh;
 }
 
 
